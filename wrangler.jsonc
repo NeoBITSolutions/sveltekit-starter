@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sveltekit-starter",
+  "account_id": "728adf8b0f1d3eb071d227d26035df92",
+  "main": ".svelte-kit/cloudflare/_worker.js",
+  "compatibility_date": "2025-05-11",
+  "workers_dev": true,
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".svelte-kit/cloudflare",
+  },
+  "build": {
+    "command": "pnpm build",
+  },
+  "vars": {
+    "NODE_ENV": "production",
+  },
+  "observability": {
+    "enabled": true,
+  },
+}
