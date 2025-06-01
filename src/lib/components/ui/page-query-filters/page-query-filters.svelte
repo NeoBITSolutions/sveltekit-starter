@@ -31,7 +31,7 @@
       <Input
         name="query"
         type="search"
-        placeholder="Search quests..."
+        placeholder="Search..."
         value={page.url.searchParams.get("query") || ""} />
       <Button variant="outline" size="icon" type="submit"><Search /></Button>
     </form>
