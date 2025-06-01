@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Button, Calendar, Select } from "$lib/components/ui";
-  import { cn } from "$lib/utils";
+  import { cn, type WithoutChildrenOrChild } from "$lib/utils";
   import { DateFormatter, getLocalTimeZone } from "@internationalized/date";
   import { X } from "@lucide/svelte";
-  import { Calendar as CalendarPrimitive, type WithoutChildrenOrChild } from "bits-ui";
+  import { Calendar as CalendarPrimitive } from "bits-ui";
 
   let {
     ref = $bindable(null),

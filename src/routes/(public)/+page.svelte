@@ -71,9 +71,11 @@
   <div class="grid gap-6 md:grid-cols-3">
     <Card.Root>
       <Card.Header>
-        <Card.Title class="flex items-center gap-2 text-primary">
-          <ChevronsUp />
-          <span>Accelerate Your Vision</span>
+        <Card.Title>
+          <h3 class="text-primary flex items-center gap-2">
+            <ChevronsUp />
+            <span>Accelerate Your Vision</span>
+          </h3>
         </Card.Title>
       </Card.Header>
       <Card.Content>
@@ -85,9 +87,11 @@
 
     <Card.Root>
       <Card.Header>
-        <Card.Title class="flex items-center gap-2 text-primary">
-          <Settings />
-          <span>Ship with Confidence</span>
+        <Card.Title>
+          <h3 class="text-primary flex items-center gap-2">
+            <Settings />
+            <span>Ship with Confidence</span>
+          </h3>
         </Card.Title>
       </Card.Header>
       <Card.Content>
@@ -100,9 +104,11 @@
 
     <Card.Root>
       <Card.Header>
-        <Card.Title class="flex items-center gap-2 text-primary">
-          <ShieldCheck />
-          <span>Future-Proof Your Foundation</span>
+        <Card.Title>
+          <h3 class="text-primary flex items-center gap-2">
+            <ShieldCheck />
+            <span>Future-Proof Your Foundation</span>
+          </h3>
         </Card.Title>
       </Card.Header>
       <Card.Content>
@@ -145,7 +151,9 @@
   <div class="grid gap-6 md:grid-cols-3">
     <Card.Root>
       <Card.Header>
-        <Card.Title>Svelte 5 & SvelteKit 2</Card.Title>
+        <Card.Title>
+          <h3>Svelte 5 & SvelteKit 2</h3>
+        </Card.Title>
       </Card.Header>
       <Card.Content>
         Leverage the latest advancements in the Svelte ecosystem, including runes for fine-grained
@@ -156,7 +164,9 @@
 
     <Card.Root>
       <Card.Header>
-        <Card.Title>SQLite on Cloudflare D1 with Drizzle ORM</Card.Title>
+        <Card.Title>
+          <h3>SQLite on Cloudflare D1 with Drizzle ORM</h3>
+        </Card.Title>
       </Card.Header>
       <Card.Content>
         Enjoy type-safe, efficient database interactions. Drizzle ORM provides an exceptional
@@ -167,7 +177,9 @@
 
     <Card.Root>
       <Card.Header>
-        <Card.Title>Lucia Auth</Card.Title>
+        <Card.Title>
+          <h3>Lucia Auth</h3>
+        </Card.Title>
       </Card.Header>
       <Card.Content>
         Instead of a monolithic package, Lucia provides a comprehensive set of utilities. This
@@ -179,7 +191,9 @@
 
     <Card.Root>
       <Card.Header>
-        <Card.Title>Resend Integration</Card.Title>
+        <Card.Title>
+          <h3>Resend Integration</h3>
+        </Card.Title>
       </Card.Header>
       <Card.Content>
         Reliable and developer-friendly transactional email delivery for essential communications
@@ -189,7 +203,9 @@
 
     <Card.Root>
       <Card.Header>
-        <Card.Title>Tailwind CSS & Shadcn UI</Card.Title>
+        <Card.Title>
+          <h3>Tailwind CSS & Shadcn UI</h3>
+        </Card.Title>
       </Card.Header>
       <Card.Content>
         Build beautiful, responsive, and accessible user interfaces at speed. Tailwind's
@@ -200,7 +216,9 @@
 
     <Card.Root>
       <Card.Header>
-        <Card.Title>Superforms & Zod (with Formsnap)</Card.Title>
+        <Card.Title>
+          <h3>Superforms & Zod (with Formsnap)</h3>
+        </Card.Title>
       </Card.Header>
       <Card.Content>
         Create robust, type-safe forms that work seamlessly on both client and server. Zod ensures

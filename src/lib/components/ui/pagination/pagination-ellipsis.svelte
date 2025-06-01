@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn, type WithElementRef, type WithoutChildren } from "$lib/utils";
   import { Ellipsis } from "@lucide/svelte";
-  import type { WithElementRef, WithoutChildren } from "bits-ui";
   import type { HTMLAttributes } from "svelte/elements";
 
   let {
@@ -14,6 +13,7 @@
 <span
   bind:this={ref}
   aria-hidden="true"
+  data-slot="pagination-ellipsis"
   class={cn("flex size-9 items-center justify-center", className)}
   {...restProps}>
   <Ellipsis class="size-4" />

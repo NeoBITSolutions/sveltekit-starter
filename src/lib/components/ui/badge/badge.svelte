@@ -1,18 +1,18 @@
 <script lang="ts" module>
-  import { type VariantProps, tv } from "tailwind-variants";
+  import { tv, type VariantProps } from "tailwind-variants";
 
   export const badgeVariants = tv({
-    base: "focus:ring-ring inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2",
+    base: "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-danger/20 dark:aria-invalid:ring-danger/40 aria-invalid:border-danger inline-flex w-fit shrink-0 items-center justify-center gap-1 overflow-hidden whitespace-nowrap rounded-md border px-2 py-0.5 text-xs font-medium transition-[color,box-shadow] focus-visible:ring-[3px] [&>svg]:pointer-events-none [&>svg]:size-3",
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/80 border-transparent",
+        default: "bg-primary text-primary-foreground [a&]:hover:bg-primary/90 border-transparent",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 border-transparent",
-        accent: "bg-accent text-accent-foreground hover:bg-accent/80 border-transparent",
-        danger: "bg-danger text-danger-foreground hover:bg-danger/80 border-transparent",
-        success: "bg-success text-success-foreground hover:bg-success/80 border-transparent",
-        warning: "bg-warning text-warning-foreground hover:bg-warning/80 border-transparent",
-        outline: "text-foreground",
+          "bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90 border-transparent",
+        accent: "bg-accent text-accent-foreground [a&]:hover:bg-accent/90 border-transparent",
+        danger: "bg-danger text-danger-foreground [a&]:hover:bg-danger/90 border-transparent",
+        success: "bg-success text-success-foreground [a&]:hover:bg-success/90 border-transparent",
+        warning: "bg-warning text-warning-foreground [a&]:hover:bg-warning/90 border-transparent",
+        outline: "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
       },
     },
     defaultVariants: {
@@ -24,8 +24,7 @@
 </script>
 
 <script lang="ts">
-  import { cn } from "$lib/utils";
-  import type { WithElementRef } from "bits-ui";
+  import { cn, type WithElementRef } from "$lib/utils";
   import type { HTMLAnchorAttributes } from "svelte/elements";
 
   let {
@@ -43,6 +42,7 @@
 <svelte:element
   this={href ? "a" : "span"}
   bind:this={ref}
+  data-slot="badge"
   {href}
   class={cn(badgeVariants({ variant }), className)}
   {...restProps}>

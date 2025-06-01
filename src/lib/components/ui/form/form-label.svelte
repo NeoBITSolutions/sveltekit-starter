@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Label } from "$lib/components/ui";
-  import { cn } from "$lib/utils";
-  import type { WithoutChild } from "bits-ui";
+  import { cn, type WithoutChild } from "$lib/utils";
   import * as FormPrimitive from "formsnap";
 
   let {
@@ -14,7 +13,7 @@
 
 <FormPrimitive.Label {...restProps} bind:ref>
   {#snippet child({ props })}
-    <Label {...props} class={cn("data-[fs-error]:text-danger", className)}>
+    <Label {...props} data-slot="form-label" class={cn("data-[fs-error]:text-danger", className)}>
       {@render children?.()}
     </Label>
   {/snippet}

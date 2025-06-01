@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
-  import type { WithElementRef } from "bits-ui";
+  import { cn, type WithElementRef } from "$lib/utils";
   import type { HTMLAttributes } from "svelte/elements";
 
   let {
@@ -11,6 +10,10 @@
   }: WithElementRef<HTMLAttributes<HTMLUListElement>> = $props();
 </script>
 
-<ul bind:this={ref} class={cn("flex flex-row items-center gap-1", className)} {...restProps}>
+<ul
+  bind:this={ref}
+  data-slot="pagination-content"
+  class={cn("flex flex-row items-center gap-1", className)}
+  {...restProps}>
   {@render children?.()}
 </ul>

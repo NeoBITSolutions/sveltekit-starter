@@ -5,7 +5,6 @@
 
   let {
     ref = $bindable(null),
-    type = "button",
     class: className,
     ...restProps
   }: AlertDialogPrimitive.CancelProps = $props();
@@ -13,6 +12,6 @@
 
 <AlertDialogPrimitive.Cancel
   bind:ref
-  class={cn(buttonVariants({ variant: "outline" }), "mt-2 sm:mt-0", className)}
-  {type}
+  data-slot="alert-dialog-cancel"
+  class={cn(buttonVariants({ variant: "outline" }), className)}
   {...restProps} />

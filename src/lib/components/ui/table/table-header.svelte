@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
-  import type { WithElementRef } from "bits-ui";
+  import { cn, type WithElementRef } from "$lib/utils";
   import type { HTMLAttributes } from "svelte/elements";
 
   let {
@@ -11,6 +10,10 @@
   }: WithElementRef<HTMLAttributes<HTMLTableSectionElement>> = $props();
 </script>
 
-<thead bind:this={ref} class={cn("[&_tr]:border-b", className)} {...restProps}>
+<thead
+  bind:this={ref}
+  data-slot="table-header"
+  class={cn("[&_tr]:border-b", className)}
+  {...restProps}>
   {@render children?.()}
 </thead>

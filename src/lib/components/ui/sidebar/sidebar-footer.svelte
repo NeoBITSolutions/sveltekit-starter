@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
-  import type { WithElementRef } from "bits-ui";
+  import { cn, type WithElementRef } from "$lib/utils";
   import type { HTMLAttributes } from "svelte/elements";
 
   let {
@@ -13,6 +12,7 @@
 
 <div
   bind:this={ref}
+  data-slot="sidebar-footer"
   data-sidebar="footer"
   class={cn("flex flex-col gap-2 p-2", className)}
   {...restProps}>

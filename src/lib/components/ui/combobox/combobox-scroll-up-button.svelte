@@ -12,6 +12,7 @@
 
 <ComboboxPrimitive.ScrollUpButton
   bind:ref
+  data-slot="combobox-scroll-up-button"
   class={cn("flex cursor-default items-center justify-center py-1", className)}
   {...restProps}>
   <ChevronUp class="size-4" />

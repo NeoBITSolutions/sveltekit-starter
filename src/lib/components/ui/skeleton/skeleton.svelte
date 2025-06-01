@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
-  import type { WithElementRef, WithoutChildren } from "bits-ui";
+  import { cn, type WithElementRef, type WithoutChildren } from "$lib/utils";
   import type { HTMLAttributes } from "svelte/elements";
 
   let {
@@ -10,5 +9,9 @@
   }: WithoutChildren<WithElementRef<HTMLAttributes<HTMLDivElement>>> = $props();
 </script>
 
-<div bind:this={ref} class={cn("animate-pulse rounded-md bg-muted", className)} {...restProps}>
+<div
+  bind:this={ref}
+  data-slot="skeleton"
+  class={cn("bg-accent animate-pulse rounded-md", className)}
+  {...restProps}>
 </div>

@@ -11,5 +11,6 @@
 
 <ComboboxPrimitive.GroupHeading
   bind:ref
-  class={cn("py-1.5 pl-8 pr-2 text-sm font-semibold", className)}
+  data-slot="combobox-group-heading"
+  class={cn("py-1.5 pr-2 pl-8 text-sm font-semibold", className)}
   {...restProps} />
