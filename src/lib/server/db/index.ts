@@ -1,10 +1,8 @@
-import { env } from "$env/dynamic/private";
-import { createClient } from "@libsql/client";
-import { drizzle } from "drizzle-orm/libsql";
-import * as schema from "./schema";
+import { sql } from "drizzle-orm";
+import type { AnySQLiteColumn } from "drizzle-orm/sqlite-core";
 
-if (!env.DATABASE_URL) throw new Error("DATABASE_URL is not set");
+export * from "./schema";
 
-const client = createClient({ url: env.DATABASE_URL });
-
-export const db = drizzle(client, { schema });
+export const lower = (value: AnySQLiteColumn) => {
+  return sql`lower(${value})`;
+};

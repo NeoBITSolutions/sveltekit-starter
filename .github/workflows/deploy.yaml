@@ -19,8 +19,8 @@ jobs:
       - name: Setup node and pnpm
         uses: ./.github/actions/setup
 
-      # - name: Migrate database
-      #   run: pnpm run db:migrate
+      - name: Migrate database
+        run: pnpm run db:migrate
 
       - name: Publish worker
         uses: cloudflare/wrangler-action@v3

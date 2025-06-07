@@ -18,4 +18,13 @@
   "observability": {
     "enabled": true,
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sveltekit-starter",
+      "database_id": "e94dc8db-ecda-4ed1-accc-daaf1655a41f",
+      "migrations_table": "__drizzle_migrations",
+      "migrations_dir": "./src/lib/server/db/migrations",
+    },
+  ],
 }
