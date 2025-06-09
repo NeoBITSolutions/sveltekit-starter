@@ -26,9 +26,9 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        #   secrets: |
-        #     RESEND_API_KEY
-        #     CLOUDFLARE_TURNSTILE_SECRET_KEY
-        # env:
-        #   RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        #   CLOUDFLARE_TURNSTILE_SECRET_KEY: ${{ secrets.CLOUDFLARE_TURNSTILE_SECRET_KEY }}
+          secrets: |
+            RESEND_API_KEY
+            CLOUDFLARE_TURNSTILE_SECRET_KEY
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          CLOUDFLARE_TURNSTILE_SECRET_KEY: ${{ secrets.CLOUDFLARE_TURNSTILE_SECRET_KEY }}

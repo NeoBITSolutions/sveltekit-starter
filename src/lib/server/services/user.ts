@@ -19,3 +19,18 @@ export const getUserByEmail = async (db: DrizzleD1Database, email: string) => {
 
   return user[0];
 };
+
+export const createUser = async (db: DrizzleD1Database, email: string) => {
+  const user = await db
+    .insert(users)
+    .values({
+      email,
+    })
+    .onConflictDoNothing()
+    .returning();
+  if (user.length === 0) {
+    return null;
+  }
+
+  return user[0];
+};

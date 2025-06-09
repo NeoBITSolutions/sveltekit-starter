@@ -1,21 +1,20 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  // import { goto } from "$app/navigation";
   import { Form, Input, Link } from "$lib/components/ui";
-  import { signInSchema } from "$lib/schemas";
+  import { signUpSchema } from "$lib/schemas";
   import { publicPagesState } from "$lib/state";
   import { CLOUDFLARE_TURNSTILE_SITE_KEY, handleError } from "$lib/utils";
   import { toast } from "svelte-sonner";
   import { Turnstile } from "svelte-turnstile";
   import { superForm } from "sveltekit-superforms";
-  import { zodClient } from "sveltekit-superforms/adapters";
+  import { zod } from "sveltekit-superforms/adapters";
 
-  publicPagesState.title = "Sign In";
+  publicPagesState.title = "Sign Up";
   publicPagesState.header = undefined;
   const { data } = $props();
 
   const form = superForm(data.form, {
-    validators: zodClient(signInSchema),
+    validators: zod(signUpSchema),
     onUpdate: async ({ result }) => {
       if (result.type === "failure") {
         if (result.data?.message) {
@@ -38,6 +37,15 @@
 </script>
 
 <form class="grid gap-4" method="POST" use:enhance>
+  <Form.Field {form} name="displayName">
+    <Form.Control>
+      {#snippet children({ props })}
+        <Form.Label>Display name</Form.Label>
+        <Input {...props} bind:value={$formData.displayName} />
+      {/snippet}
+    </Form.Control>
+  </Form.Field>
+
   <Form.Field {form} name="email">
     <Form.Control>
       {#snippet children({ props })}
@@ -63,4 +71,4 @@
   <Form.Button>Continue with email</Form.Button>
 </form>
 
-<p>Don't have an account? <Link href="sign-up">Create account</Link></p>
+<p>Already have an account? <Link href="sign-in">Sign in</Link></p>

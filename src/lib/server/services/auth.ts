@@ -73,7 +73,7 @@ export const deleteVerificationCodeCookie = (cookies: Cookies) => {
   });
 };
 
-export const getVerificationToken = async (db: DrizzleD1Database, code: string) => {
+export const getVerificationCode = async (db: DrizzleD1Database, code: string) => {
   const verificationCode = await db
     .select()
     .from(verificationCodes)
@@ -84,6 +84,10 @@ export const getVerificationToken = async (db: DrizzleD1Database, code: string) 
   }
 
   return verificationCode[0];
+};
+
+export const deleteVerificationCodesForUser = async (db: DrizzleD1Database, userId: string) => {
+  await db.delete(verificationCodes).where(eq(verificationCodes.userId, userId));
 };
 
 export const generateSessionToken = () => {
@@ -159,4 +163,8 @@ export const validateSessionToken = async (db: DrizzleD1Database, token: string)
   }
 
   return { user, session };
+};
+
+export const invalidateSession = async (db: DrizzleD1Database, sessionId: string) => {
+  await db.delete(sessions).where(eq(sessions.id, sessionId));
 };

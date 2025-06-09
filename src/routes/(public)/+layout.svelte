@@ -3,7 +3,7 @@
   import { publicPagesState } from "$lib/state";
   import { APP_NAME } from "$lib/utils";
 
-  const { children } = $props();
+  const { children, data } = $props();
 </script>
 
 <svelte:head>
@@ -14,7 +14,7 @@
   class="grid min-h-screen {publicPagesState.header
     ? 'grid-rows-[auto_auto_1fr_auto]'
     : 'grid-rows-[auto_1fr_auto]'}">
-  <PublicNavbar isAuthenticated={false} />
+  <PublicNavbar isAuthenticated={!!data.user && !!data.session} />
   {#if publicPagesState.header}
     <header class="container grid min-h-[90vh] items-center gap-8 md:grid-cols-2">
       {@render publicPagesState.header()}
