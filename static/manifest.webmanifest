@@ -2,12 +2,12 @@
   "name": "Sveltekit Starter",
   "short_name": "Sveltekit Starter",
   "description": "Stop wrestling with boilerplate. This starter project provides a rock-solid, modern foundation with Svelte and SvelteKit, Drizzle ORM, Lucia Auth, Tailwind CSS, Shadcn UI, and seamless Cloudflare integrations. Focus on your unique features, not the setup.",
-  "start_url": "/dashboard1",
+  "start_url": "/dashboard",
   "lang": "en-US",
   "scope": "/",
   "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#155dfc",
+  "theme_color": "#155dfc",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "/img/icons/favicon-72x72.png",

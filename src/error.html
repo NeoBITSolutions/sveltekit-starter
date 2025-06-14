@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>%sveltekit.error.message%</title>
+
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 240, 10%, 4%;
+
+        --primary: 221, 97%, 53%;
+      }
+
+      .dark {
+        --background: 240, 10%, 4%;
+        --foreground: 0 0% 98%;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", "Noto Color Emoji";
+      }
+
+      .content {
+        order: 2;
+        padding: 1.5rem 1rem 0 1rem;
+      }
+
+      #status,
+      #message {
+        display: none;
+      }
+
+      h1 {
+        color: hsl(var(--primary));
+        font-size: 2.25rem;
+        padding-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      img {
+        order: 1;
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 768px) {
+        body {
+          flex-direction: row;
+        }
+
+        .content {
+          order: 1;
+          padding-top: 0;
+        }
+
+        img {
+          order: 2;
+          max-width: 56rem;
+          padding-right: 1rem;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <span id="status">%sveltekit.status%</span>
+      <span id="message">%sveltekit.error.message%</span>
+      <h1>Oops, something went wrong...</h1>
+      <p id="messageDisplay"></p>
+    </div>
+    <img src="/warning.svg" alt="warning" />
+
+    <script>
+      const mode = localStorage.getItem("mode-watcher-mode");
+      if (mode && mode === "dark") {
+        document.body.classList.add("dark");
+      }
+
+      const statusEl = document.querySelector("#status");
+      const messageEl = document.querySelector("#message");
+      const status = statusEl?.textContent ?? "500";
+      let message = messageEl?.textContent ?? "";
+      switch (status) {
+        case "400":
+          message =
+            "Double-check the form you submitted and try again. If the error persists, please contact support!";
+          break;
+
+        case "401":
+          message = "You need to sign in first!";
+          break;
+
+        case "403":
+          message = "You don't have access to this resource!";
+          break;
+
+        case "404":
+          message = "The resource you are trying to access was not found!";
+          break;
+
+        default:
+          const supportMessage = "Please try again later or contact support!";
+          message ? (message += ". " + supportMessage) : supportMessage;
+          break;
+      }
+
+      const messageDisplayEl = document.querySelector("#messageDisplay");
+      messageDisplayEl.textContent = message;
+    </script>
+  </body>
+</html>
