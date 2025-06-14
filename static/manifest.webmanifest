@@ -1,0 +1,75 @@
+{
+  "name": "Sveltekit Starter",
+  "short_name": "Sveltekit Starter",
+  "description": "Stop wrestling with boilerplate. This starter project provides a rock-solid, modern foundation with Svelte and SvelteKit, Drizzle ORM, Lucia Auth, Tailwind CSS, Shadcn UI, and seamless Cloudflare integrations. Focus on your unique features, not the setup.",
+  "start_url": "/dashboard1",
+  "lang": "en-US",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#155dfc",
+  "icons": [
+    {
+      "src": "/img/icons/favicon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icons/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icons/favicon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icons/favicon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icons/favicon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icons/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icons/favicon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icons/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/screenshots/desktop1.png",
+      "sizes": "2593x1310",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/img/screenshots/mobile1.png",
+      "sizes": "619x1373",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

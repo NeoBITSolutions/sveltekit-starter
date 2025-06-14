@@ -1,6 +1,6 @@
 <script>
   import { Button, Card } from "$lib/components/ui";
-  import { publicPagesState } from "$lib/state";
+  import { publicPagesState, pwaState } from "$lib/state";
   import { ChevronsUp, Settings, ShieldCheck } from "@lucide/svelte";
 
   publicPagesState.title = "Home";
@@ -20,6 +20,7 @@
       <Button href="https://github.com/NeoBITSolutions/sveltekit-starter" target="_blank">
         Get Started on GitHub
       </Button>
+      <Button variant="secondary" onclick={pwaState.installPWA}>Try it out</Button>
     </div>
   </div>
 
