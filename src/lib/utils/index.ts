@@ -1,6 +1,7 @@
 export * from "./constants";
 export * from "./email-templates";
 export * from "./select";
+export * from "./string";
 export * from "./tailwind";
 export * from "./toast";
 

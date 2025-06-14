@@ -94,6 +94,7 @@
         <Input {...props} bind:value={$verificationFormData.verificationCode} />
       {/snippet}
     </Form.Control>
+    <Form.FieldErrors />
   </Form.Field>
 
   <Form.Field form={verificationForm} name="captchaToken">
@@ -107,6 +108,7 @@
           }} />
       {/snippet}
     </Form.Control>
+    <Form.FieldErrors />
   </Form.Field>
 
   <Form.Button>Verify code</Form.Button>
@@ -141,6 +143,7 @@
               }} />
           {/snippet}
         </Form.Control>
+        <Form.FieldErrors />
       </Form.Field>
 
       <Form.Button>Resend verification code</Form.Button>

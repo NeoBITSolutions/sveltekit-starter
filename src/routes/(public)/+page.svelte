@@ -9,7 +9,7 @@
 
 {#snippet header()}
   <div class="grid gap-6">
-    <h1>Launch Your Next Idea, Faster Than Ever.</h1>
+    <h1 class="text-primary">Launch Your Next Idea, Faster Than Ever.</h1>
     <h2>
       Stop wrestling with boilerplate. This starter project provides a rock-solid, modern foundation
       with Svelte and SvelteKit, Drizzle ORM, Lucia Auth, Tailwind CSS, Shadcn UI, and seamless

@@ -24,7 +24,9 @@ export const feedbacks = sqliteTable("feedbacks", {
   }).notNull(),
   state: text("state", {
     enum: [FeedbackStates.new, FeedbackStates.done],
-  }).notNull(),
+  })
+    .notNull()
+    .default(FeedbackStates.new),
   createdAt: text("created_at")
     .notNull()
     .default(sql`CURRENT_TIMESTAMP`),

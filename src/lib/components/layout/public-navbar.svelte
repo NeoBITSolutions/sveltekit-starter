@@ -29,17 +29,18 @@
 {#snippet themeButton()}
   <Button onclick={toggleMode} variant="outline-accent" size="icon">
     <Sun
-      class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
     <Moon
-      class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
     <span class="sr-only">Toggle theme</span>
   </Button>
 {/snippet}
 
 <nav class="bg-primary py-6">
   <div class="container flex items-center justify-between gap-4">
-    <a class="text-accent" href="/">
-      {APP_NAME}
+    <a class="flex items-center gap-4 bg-slate-50/30 px-2" href="/">
+      <img class="max-h-10 lg:max-h-20" src="/logo.svg" alt="logo" />
+      <span class="text-accent text-3xl font-semibold md:text-2xl lg:text-4xl">{APP_NAME}</span>
     </a>
 
     <div class="hidden gap-8 md:flex">

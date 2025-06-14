@@ -50,7 +50,7 @@ CREATE TABLE `feedbacks` (
 	`subject` text NOT NULL,
 	`message` text NOT NULL,
 	`type` text NOT NULL,
-	`state` text NOT NULL,
+	`state` text DEFAULT 'new' NOT NULL,
 	`created_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	`updated_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL
 );

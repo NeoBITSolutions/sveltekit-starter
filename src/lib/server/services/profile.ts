@@ -15,11 +15,11 @@ export const getProfileByDisplayName = async (db: DrizzleD1Database, displayName
   return profile[0];
 };
 
-export const createProfile = async (db: DrizzleD1Database, profileInsert: ProfileInsert) => {
-  const profile = await db.insert(profiles).values(profileInsert).returning();
-  if (profile.length === 0) {
+export const createProfile = async (db: DrizzleD1Database, profile: ProfileInsert) => {
+  const _profile = await db.insert(profiles).values(profile).returning();
+  if (_profile.length === 0) {
     return null;
   }
 
-  return profile[0];
+  return _profile[0];
 };

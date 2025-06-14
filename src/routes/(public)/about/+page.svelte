@@ -8,7 +8,7 @@
 
 {#snippet header()}
   <div class="grid gap-6">
-    <h1>About {APP_NAME}</h1>
+    <h1 class="text-primary">About {APP_NAME}</h1>
     <h2>The Foundation for Your Next Breakthrough.</h2>
   </div>
 

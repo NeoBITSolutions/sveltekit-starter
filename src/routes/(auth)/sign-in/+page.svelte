@@ -45,6 +45,7 @@
         <Input {...props} bind:value={$formData.email} />
       {/snippet}
     </Form.Control>
+    <Form.FieldErrors />
   </Form.Field>
 
   <Form.Field {form} name="captchaToken">
@@ -58,6 +59,7 @@
           }} />
       {/snippet}
     </Form.Control>
+    <Form.FieldErrors />
   </Form.Field>
 
   <Form.Button>Continue with email</Form.Button>
